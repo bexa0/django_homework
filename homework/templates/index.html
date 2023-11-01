@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <h2>Episode</h2>
+        {% for episode in episodes %}
+            <p>{{ episode.num_episode }}</p>
+            <a href="{{ episode.get_absolute_url }}">Details</a>
+        {% endfor %}
+        <h2>Characters</h2>
+        {% for char in character %}
+            <p>{{ char.name }}</p>
+            <a href="{{ char.get_absolute_url }}">Details</a>
+        {% endfor %}
+        <h2>Main Character</h2>
+        {% for main_char in main_character %}
+            <p>{{ main_char.name }}</p>
+            <a href="{{ main_char.get_absolute_url }}">Details</a>
+        {% endfor %}
+        <h2>Guides</h2>
+        {% for guide in guides %}
+            <p>{{ guide.num_floor }}</p>
+            <a href="{{ guide.get_absolute_url }}">Details</a>
+        {% endfor %}
+        <h2>Items</h2>
+        {% for item in items %}
+            <p>{{ item.name }}</p>
+            <a href="{{ item.get_absolute_url }}">Details</a>
+        {% endfor %}
+<!--        <h1>Episode</h1>-->
+<!--        <a href="http://127.0.0.1:8000/episode">details</a>-->
+<!--        <h1>Main character</h1>-->
+<!--        <a href="http://127.0.0.1:8000/mainchar">details</a>-->
+<!--        <h1>Characters</h1>-->
+<!--        <a href="http://127.0.0.1:8000/characters">details</a>-->
+<!--        <h1>Items</h1>-->
+<!--        <a href="http://127.0.0.1:8000/item">details</a>-->
+<!--        <h1>Guide Game</h1>-->
+<!--        <a href="http://127.0.0.1:8000/guide">details</a>-->
+    </div>
+</body>
+</html>
